@@ -1,0 +1,164 @@
+/* Updated Color Scheme */
+:root {
+    --primary-color: #3a2f50; /* Deep Plum */
+    --secondary-color: #ff6f61; /* Coral Red */
+    --accent-color: #1d84b5; /* Azure Blue */
+    --background-color: #f5f5f5; /* Light Grey */
+    --text-light: #ffffff; /* White */
+}
+
+/* Overall Background */
+body {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease;
+}
+
+/* Dark Background Container */
+.dark-background {
+    background: radial-gradient(circle, var(--primary-color), #1b1b2f);
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Text Styling */
+.text-color {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px var(--primary-color);
+}
+
+/* Flex Container */
+.flex-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.5s all ease;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 10px;
+}
+
+/* Flex Items with Glow */
+.flex-item {
+    background: var(--secondary-color);
+    border: 1pt solid #fff;
+    width: 10px;
+    transition: 0.2s all ease;
+    box-shadow: 0px 0px 10px 2px var(--secondary-color);
+    border-radius: 5px;
+}
+
+.flex-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 4px var(--secondary-color);
+}
+
+/* Grid Layout */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Input Panel */
+#input-panel {
+    margin-top: 50px;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px var(--primary-color);
+}
+
+/* Center Content */
+.center {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+/* Sorting Animation */
+#sorting {
+    margin-bottom: 50px;
+    transform: rotate(180deg) scaleX(-1);
+    animation: rotate 2s linear infinite;
+}
+
+/* @keyframes rotate {
+    0% {
+        transform: rotate(0deg) scaleX(-1);
+    }
+    100% {
+        transform: rotate(360deg) scaleX(-1);
+    }
+} */
+
+/* Range Input */
+.range-input {
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    border-radius: 10px;
+    line-height: 50px;
+    display: flex;
+    vertical-align: middle;
+    height: 50px;
+    background: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0px 0px 15px 3px var(--accent-color);
+}
+
+.range-input input {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+.range-input input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-light);
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.range-input input::-webkit-slider-thumb:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.range-input .label {
+    color: var(--text-light);
+    font-weight: bold;
+    display: flex;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+}
+
+/* Email Text */
+#email {
+    color: var(--accent-color);
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+#email:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
